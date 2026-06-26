@@ -1,0 +1,17 @@
+# Write a program to Compress a string. 
+
+string = input("Enter a string: ")
+
+result = ""
+count = 1
+
+for i in range(len(string) - 1):
+    if string[i] == string[i + 1]:
+        count = count + 1
+    else:
+        result = result + string[i] + str(count)
+        count = 1
+
+result = result + string[len(string) - 1] + str(count)
+
+print("Compressed string:", result)
